@@ -18,7 +18,7 @@ module.exports = {
   ],
   // add your custom rules here
   'rules': {
-    'indent': [level, 2],
+    'indent': [level, 4],
     'semi': [level, 'always'],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
