@@ -41,15 +41,16 @@
 <script>
 export default {
   name: 'hello',
-  data() {
+  data () {
     this.$http.get('/a').then(res => {
-      console.log('mock 数据支持成功', res);
-    });
+      console.log('mock 数据支持成功', res)
+    })
+
     return {
       msg: 'Welcome to Your Vue.js App'
-    };
+    }
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
