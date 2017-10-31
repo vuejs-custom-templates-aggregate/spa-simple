@@ -16,6 +16,9 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+
+# build for qa, do not uglify code
+npm run qa
 {{#unit}}
 
 # run unit tests
@@ -32,5 +35,3 @@ npm run e2e
 npm test
 {{/if_or}}
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
