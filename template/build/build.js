@@ -13,7 +13,7 @@ var webpackConfig = require('./webpack.prod.conf')
 var spinner = ora('building for production...')
 spinner.start()
 
-if (process.argv.indexOf('--qa')) {
+if (process.argv.indexOf('--qa') > -1) {
   webpackConfig.plugins.splice(1, 1)
 }
 

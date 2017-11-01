@@ -21,7 +21,7 @@ $ npm install
 $ npm run dev
 ```
 
-If port 8080 is already in use on your machine you must change the port number in `/config/index.js`. Otherwise `npm run dev` will fail.
+If port 9090 is already in use on your machine you must change the port number in `/config/index.js`. Otherwise `npm run dev` will fail.
 
 ## What's Included
 
