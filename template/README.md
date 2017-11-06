@@ -41,7 +41,9 @@ npm test
 {{/if_or}}
 ```
 
-## other
+## About Code Style
+
+Text editor plugins: https://standardjs.com/#are-there-text-editor-plugins
 
 If you used vscode-fecs-plugin in other project, find the plugin in left and last icon, and then click the "Disable(Workspace)".
 

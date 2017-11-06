@@ -1,8 +1,5 @@
 // http://eslint.org/docs/user-guide/configuring
 
-// rules level:
-// 0:close, 1:warning, 2:error
-const level = 1;
 module.exports = {
   root: true,
   parser: 'babel-eslint',
