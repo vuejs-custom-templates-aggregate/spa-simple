@@ -1,38 +1,26 @@
 <template>
   <div class="hello">
-    <h1>\{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
+    <h1>欢迎来到 vue 自定义脚手架 spa-simple</h1>
+    <h2>定位</h2>
+    <div>
+      作为以 vue 为基础的开源项目的基础工程，选用业界最通用的规范和最领先的技术，去掉不必要的定制开箱既用，方便更多的人参与进来。
+    </div>
+    <h2>特性</h2>
+    <ul class="feature-list">
       <li>
-        <a href="https://vuejs.org" target="_blank">Core Docs</a>
+        {{text}}
       </li>
       <li>
-        <a href="https://forum.vuejs.org" target="_blank">Forum</a>
+        <a href="https://standardjs.com/" target="_blank">standard 规范</a>
       </li>
       <li>
-        <a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a>
+        <a  href="http://www.iconfont.cn/" target="_blank">iconfont 图标</a>
       </li>
       <li>
-        <a href="https://twitter.com/vuejs" target="_blank">Twitter</a>
-      </li>
-      <br>
-      <li>
-        <a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a href="http://router.vuejs.org/" target="_blank">vue-router</a>
+        <a href="http://necolas.github.io/normalize.css/" target="_blank">CSS Normalize</a>
       </li>
       <li>
-        <a href="http://vuex.vuejs.org/" target="_blank">vuex</a>
-      </li>
-      <li>
-        <a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a>
-      </li>
-      <li>
-        <a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a>
+        vue-cli 原生提供的 vue-router、hot-load、less
       </li>
     </ul>
   </div>
@@ -43,34 +31,40 @@ export default {
   name: 'hello',
   data () {
     this.$http.get('/a').then(res => {
-      console.log('mock 数据支持成功', res)
+      this.text = res.data.data.text;
+      this.picUrl = res.data.data.picUrl;
     })
 
     return {
-      msg: 'Welcome to Your Vue.js App'
+      text: '',
+      picUrl: ''
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1,
-h2 {
-  font-weight: normal;
-}
+<style scoped lang="less">
+  h1,
+  h2 {
+    font-weight: normal;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 
-a {
-  color: #42b983;
-}
+  a {
+    color: #42b983;
+  }
+  .feature-list {
+    > li {
+      display: block;
+    }
+  }
 </style>

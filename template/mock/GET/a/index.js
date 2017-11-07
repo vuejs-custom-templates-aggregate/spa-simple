@@ -1,16 +1,19 @@
 /**
  * @file 模拟数据示例
  *
- * @author 赵晓强
+ * @author longze
  */
 
-let mock = require('mockjs');
+// http://mockjs.com/examples.html
+const mock = require('mockjs')
 
 module.exports = function (param) {
-
-    return {
-        status: 0,
-        statusInfo: '',
-        data: mock.Random.cparagraph()
-    };
-};
+  return {
+    status: 0,
+    statusInfo: '',
+    data: {
+      text: '服务器端 mock 数据',
+      pic: mock.Random.image('200x100', '#4A7BF7', 'Hello')
+    }
+  }
+}
