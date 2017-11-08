@@ -72,3 +72,14 @@ If you used vscode-fecs-plugin in other project, find the plugin in left and las
 - 在项目代码中引入；
 - 在标签上添加 class：<div class="iconfont icon-item-right">。
 
+## 目录结构
+
+    ${src}
+        ├── assets      存放静态文件
+        ├── components  存放公共组件 
+        ├── pages       存放页面
+        ├── router      路由
+        ├── App.js      单页应用中，Vue 组件的根节点
+        └── main.js     入口文件，公共资源在这里加载
+
+由于在单页应用中一切兼组件，所以全部的组件都放在 components 中反而不容易快速定位某个功能的代码，把页面全部放在 pages 中，pages 中的每个组件就是一个页面，和 router 中的配置一一对应。如果多个页面用到了相同的功能，或者功能本身不依赖于业务比较独立，那么把这类型的功能封装成组件放进 components 中。

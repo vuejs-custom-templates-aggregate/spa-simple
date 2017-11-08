@@ -6,10 +6,13 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    // 首页
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      name: 'home',
+      component () {
+        return System.import('@/pages/home')
+      }
     }
   ]
 })

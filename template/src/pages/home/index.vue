@@ -23,16 +23,21 @@
         vue-cli 原生提供的 vue-router、hot-load、less
       </li>
     </ul>
+    <mock-img :pic-url="picUrl"/>
   </div>
 </template>
 
 <script>
+import mockImg from '@/components/mock-img'
+
 export default {
-  name: 'hello',
+  components: {
+    mockImg
+  },
   data () {
     this.$http.get('/a').then(res => {
-      this.text = res.data.data.text;
-      this.picUrl = res.data.data.picUrl;
+      this.text = res.data.text
+      this.picUrl = res.data.picUrl
     })
 
     return {

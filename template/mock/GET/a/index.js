@@ -13,7 +13,7 @@ module.exports = function (param) {
     statusInfo: '',
     data: {
       text: '服务器端 mock 数据',
-      pic: mock.Random.image('200x100', '#4A7BF7', 'Hello')
+      picUrl: mock.Random.image('200x100', '#4A7BF7', 'Mock image')
     }
   }
 }

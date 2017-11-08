@@ -2,9 +2,20 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+import 'normalize.css/normalize.css'
+import '@/assets/iconfont/iconfont.css'
 
 Vue.config.productionTip = false
-// 将axios挂载到prototype上，在组件中可以直接使用this.$http访问
+
+// 添加响应拦截器
+axios.interceptors.response.use(function (res) {
+  // 对响应数据做些事
+  return res.data
+}, function (error) {
+  // 请求错误时做些事
+  return Promise.reject(error)
+})
+
 Vue.prototype.$http = axios
 
 /* eslint-disable no-new */
