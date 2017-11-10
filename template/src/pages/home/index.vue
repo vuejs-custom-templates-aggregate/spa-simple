@@ -8,7 +8,7 @@
     <h2>特性</h2>
     <ul class="feature-list">
       <li>
-        {{text}}
+        \{{text}}
       </li>
       <li>
         <a href="https://standardjs.com/" target="_blank">standard 规范</a>
