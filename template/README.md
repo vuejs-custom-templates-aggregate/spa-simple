@@ -24,6 +24,10 @@ npm run build --report
 # build for qa, do not uglify code
 # 打包但不压缩不混淆代码
 npm run qa
+
+# run server for dist
+# 为 dist 中的代码提供运行容器
+npm run server
 {{#unit}}
 
 # run unit tests
